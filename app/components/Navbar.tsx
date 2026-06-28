@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link
                 href="/"
                 onClick={closeMenu}
-                className="font-heading text-xl md:text-2xl font-bold tracking-widest uppercase text-text-main flex items-center gap-2 relative z-[100]"
+                className="font-heading text-xl md:text-2xl font-bold tracking-widest uppercase text-text-main flex items-center gap-2 relative z-20"
             >
                 <span>Twin Lens</span>
                 <span className="text-text-muted">Production</span>
@@ -78,7 +78,7 @@ export default function Navbar() {
                 ----------------------------------------- */}
             <div
                 // FIXED: Set explicitly to z-[80]
-                className={`fixed inset-0 z-[80] transition-opacity duration-500 md:hidden ${
+                className={`fixed inset-0 z-80 transition-opacity duration-500 md:hidden ${
                     isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 }`}
                 onClick={closeMenu}
@@ -88,22 +88,23 @@ export default function Navbar() {
                 MOBILE NAVIGATION OVERLAY (80% Width Liquid Glass)
                 ----------------------------------------- */}
             <div
-                // FIXED: Set explicitly to z-[90] so it stays below the z-[100] button
-                className={`fixed top-0 right-0 bottom-0 w-[80%] h-screen z-[90] flex flex-col items-center justify-center transition-transform duration-700 
-                    ease-[cubic-bezier(0.22,1,0.36,1)] 
-                    md:hidden 
-                 ${isOpen ? "translate-x-0" : "translate-x-[125%]"}`}
+                className={`fixed top-0 right-0 bottom-0 w-[80%] h-screen z-90 flex flex-col items-center justify-center transition-transform duration-700 
+        ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden 
+        bg-white/30 backdrop-blur-3xl border-l border-white/30 shadow-[0_0_50px_rgba(0,0,0,0.1)]
+     ${isOpen ? "translate-x-0 " : "translate-x-[125%]"}`}
             >
-                {/* Subtle light refraction gradients */}
-                {/* FIXED: Changed w-screen to w-full so invisible blurs don't block mobile taps on the left side */}
-                <div className="absolute top-0 bottom-0 w-full bg-background opacity-95 blur-[50px] pointer-events-none shadow-2xl z-0"></div>
+                {/* This is your "Liquid" layer. 
+        Instead of a solid background, we use the blur effect 
+        and a subtle white reflection to simulate glass.
+    */}
+                <div className="absolute inset-0 z-0 bg-linear-to-br from-brand-dim to-brand-light"></div>
 
                 <div className="flex flex-col items-center space-y-10 text-center relative z-10 w-full">
                     {NAV_LINKS.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="font-heading text-4xl sm:text-5xl font-bold uppercase tracking-widest text-text-main hover:scale-105 transition-all duration-300"
+                            className="font-heading text-4xl sm:text-5xl font-bold uppercase tracking-widest text-text-main hover:scale-105 transition-all duration-300 drop-shadow-sm"
                             onClick={closeMenu}
                         >
                             {link.name}
