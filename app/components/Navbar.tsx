@@ -1,70 +1,116 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+
+const NAV_LINKS = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+];
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
+
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-12 lg:px-24 bg-nav backdrop-blur-md border-b border-ghost">
+        <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-12 lg:px-24 bg-white/70 supports-[backdrop-filter]:bg-white/50 backdrop-blur-md border-b border-gray-200/50">
             {/* Brand / Logo */}
             <Link
                 href="/"
-                className="font-heading text-xl md:text-2xl font-bold tracking-[0.1em] uppercase text-text-main flex items-center gap-2"
+                onClick={closeMenu}
+                className="font-heading text-xl md:text-2xl font-bold tracking-widest uppercase text-text-main flex items-center gap-2 relative z-[100]"
             >
-                <span >
-
-                Twin Lens
-                </span>
-                <span className="text-brand drop-shadow-glow">
-                    Production
-                </span>
+                <span>Twin Lens</span>
+                <span className="text-text-muted">Production</span>
             </Link>
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase text-text-muted">
-                <Link
-                    href="/services"
-                    className="hover:text-text-main transition-colors"
-                >
-                    Services
-                </Link>
-                <Link
-                    href="/about"
-                    className="hover:text-text-main transition-colors"
-                >
-                    About
-                </Link>
-                <Link
-                    href="/contact"
-                    className="hover:text-text-main transition-colors"
-                >
-                    Contact
-                </Link>
+                {NAV_LINKS.map((link) => (
+                    <Link
+                        key={link.name}
+                        href={link.href}
+                        className="hover:text-text-main transition-colors"
+                        onClick={closeMenu}
+                    >
+                        {link.name}
+                    </Link>
+                ))}
             </div>
 
-            {/* Book Me CTA */}
-            <div className="hidden md:block">
-                <Link
-                    href="/contact"
-                    className="bg-brand text-brand-dark font-bold uppercase tracking-wider text-xs px-6 py-2.5 rounded-sm hover:bg-brand-dim transition-colors shadow-glow"
-                >
-                    Book Me
-                </Link>
-            </div>
-
-            {/* Mobile Hamburger Menu (Visual Placeholder) */}
-            <button className="md:hidden text-text-main hover:text-brand transition-colors">
-                <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 6h16M4 12h16m-7 6h7"
-                    ></path>
-                </svg>
+            {/* Mobile Hamburger / Close Button */}
+            <button
+                type="button"
+                onClick={toggleMenu}
+                // FIXED: Changed invalid z-100 to z-[100] so it stays above the overlay
+                className="md:hidden text-text-main hover:text-gray-600 transition-colors relative z-[100] p-3 -mr-3 bg-white/50 rounded-md backdrop-blur-sm border border-gray-200/50 cursor-pointer touch-manipulation"
+                aria-label="Toggle Menu"
+            >
+                {isOpen ? (
+                    // 'X' Close Icon
+                    <svg className="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                            d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                    </svg>
+                ) : (
+                    // Hamburger Icon
+                    <svg className="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                            d="M4 7h16M4 12h16m-7 5h7"
+                        ></path>
+                    </svg>
+                )}
             </button>
+
+            {/* -----------------------------------------
+                MOBILE NAVIGATION BACKDROP (Click to close)
+                ----------------------------------------- */}
+            <div
+                // FIXED: Set explicitly to z-[80]
+                className={`fixed inset-0 z-[80] transition-opacity duration-500 md:hidden ${
+                    isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                }`}
+                onClick={closeMenu}
+            ></div>
+
+            {/* -----------------------------------------
+                MOBILE NAVIGATION OVERLAY (80% Width Liquid Glass)
+                ----------------------------------------- */}
+            <div
+                // FIXED: Set explicitly to z-[90] so it stays below the z-[100] button
+                className={`fixed top-0 right-0 bottom-0 w-[80%] h-screen z-[90] flex flex-col items-center justify-center transition-transform duration-700 
+                    ease-[cubic-bezier(0.22,1,0.36,1)] 
+                    md:hidden 
+                 ${isOpen ? "translate-x-0" : "translate-x-[125%]"}`}
+            >
+                {/* Subtle light refraction gradients */}
+                {/* FIXED: Changed w-screen to w-full so invisible blurs don't block mobile taps on the left side */}
+                <div className="absolute top-0 bottom-0 w-full bg-background opacity-95 blur-[50px] pointer-events-none shadow-2xl z-0"></div>
+
+                <div className="flex flex-col items-center space-y-10 text-center relative z-10 w-full">
+                    {NAV_LINKS.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="font-heading text-4xl sm:text-5xl font-bold uppercase tracking-widest text-text-main hover:scale-105 transition-all duration-300"
+                            onClick={closeMenu}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                </div>
+            </div>
         </nav>
     );
 }
