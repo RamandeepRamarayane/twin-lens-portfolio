@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+    /* Backgrounds */
+    --color-background: #0e0e0e;
+    --color-surface: #131313;
+    --color-surface-low: #1c1b1b;
+    --color-surface-high: #353534;
+    --color-nav: rgba(32, 31, 31, 0.7);
+
+    /* Brand Colors (Electric Cyan) */
+    --color-brand: #00e5ff;
+    --color-brand-dim: #00daf3;
+    --color-brand-light: #c3f5ff;
+    --color-brand-dark: #001f24;
+
+    /* Typography Colors */
+    --color-text-main: #e5e2e1;
+    --color-text-muted: #849396;
+
+    /* Borders */
+    --color-ghost: rgba(59, 73, 76, 0.15);
+    --color-ghost-hover: rgba(59, 73, 76, 0.3);
+    --color-button-border: rgba(132, 147, 150, 0.2);
+
+    /* Shadows */
+    --shadow-ambient: 0 10px 40px rgba(229, 226, 225, 0.04);
+    --shadow-glow: 0 4px 12px rgba(0, 229, 255, 0.3);
+
+    /* Fonts */
+    --font-heading: "Oswald", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text-main);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+        color: var(--color-text-main);
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+}
