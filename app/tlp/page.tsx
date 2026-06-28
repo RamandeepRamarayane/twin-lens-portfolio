@@ -1,0 +1,10 @@
+
+export default function Home() {
+  return (
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">
+        Twin Lens Production | TLP
+      </h1>
+    </div>
+  );
+}
