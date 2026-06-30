@@ -22,10 +22,9 @@ export default function Navbar() {
             <Link
                 href="/"
                 onClick={closeMenu}
-                className="font-heading text-xl md:text-2xl font-bold tracking-widest uppercase text-text-main flex items-center gap-2 relative z-20"
+                className="font-heading text-xl md:text-2xl font-bold tracking-widest uppercase text-text-main flex items-center relative z-20"
             >
-                <span>Twin Lens</span>
-                <span className="text-text-muted">Production</span>
+                Twin Lens Production
             </Link>
 
             {/* Desktop Navigation Links */}

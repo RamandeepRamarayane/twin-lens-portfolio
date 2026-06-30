@@ -1,3 +1,4 @@
+"use client";
 import { cva, type VariantProps } from "class-variance-authority";
 import Link from "next/link";
 import React from "react";
@@ -8,8 +9,8 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                primary: "bg-brand text-background px-10 py-5 rounded shadow-glow hover:bg-brand-dim",
-                secondary: "border border-button-border text-text-main hover:bg-ghost-hover px-10 py-5 rounded",
+                primary: "bg-brand text-background px-10 py-4 rounded shadow-glow hover:bg-brand-dim",
+                secondary: "border border-button-border text-text-main hover:bg-ghost-hover px-10 py-4 rounded",
                 plain: "text-text-muted hover:text-brand border-b border-transparent hover:border-brand pb-1 text-xs",
             },
         },
