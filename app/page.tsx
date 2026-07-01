@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Button from "./components/Button";
 import { PROCESS_STEPS } from "./constants";
+import { getSocialLinks } from "./utility";
 
 function HeroSection() {
     return (
@@ -158,74 +159,22 @@ function AboutTlpSection() {
                     </p>
 
                     <p className="text-text-muted text-sm leading-relaxed mb-4">
-                        Your vision deserves more than just an edit,{" "}
+                        Your vision deserves more than just an edit,
+                        <br className="inline md:hidden" />
                         <span className="font-bold text-text-main">it deserves a narrative.</span>
                     </p>
                     <div className="flex gap-8 text-text-muted">
-                        {/* YouTube / Play Icon */}
-                        <a
-                            href="https://www.youtube.com/@TwinLens4Productions"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-brand transition-colors hover:shadow-glow rounded-full flex items-center justify-center"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="w-6 h-6" // Added size classes here
+                        {getSocialLinks().map((link, index) => (
+                            <a
+                                key={index}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-brand transition-colors hover:shadow-glow rounded-full flex items-center justify-center"
                             >
-                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
-                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                            </svg>
-                        </a>
-                        {/* LinkedIn / Briefcase Icon */}{" "}
-                        <a
-                            href=" https://www.instagram.com/tlp.creations"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-brand transition-colors hover:shadow-glow rounded-full flex items-center justify-center"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="w-5.5 h-5." // Added size classes here
-                            >
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/twin-lens-production"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-brand transition-colors hover:shadow-glow rounded-full flex items-center justify-center"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.5" // Fixed to camelCase
-                                strokeLinecap="round" // Fixed to camelCase
-                                strokeLinejoin="round" // Fixed to camelCase
-                                className="w-6 h-6" // Added size classes here
-                            >
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
+                                {link.icon}
+                            </a>
+                        ))}
                     </div>
                 </div>
 
@@ -260,7 +209,7 @@ export default function Home() {
             <FeaturedSection />
             <OurProcessSection />
             <AboutTlpSection />
-            <section className="py-20 px-6 text-center border-t border-ghost ">
+            <section className="py-15 px-15 md:px-6 text-center border-t border-ghost ">
                 <h2 className="font-heading text-4xl md:text-6xl font-bold uppercase tracking-tight text-text-main mb-6">
                     Ready To Start?
                 </h2>

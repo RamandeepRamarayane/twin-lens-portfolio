@@ -25,7 +25,7 @@ export async function POST(request: Request) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Timeline:</strong> ${timeline}</p>
-        <p><strong>Budget:</strong> ${budget}</p>
+        <p><strong>Budget:</strong> ${budget} (USD)</p>
         <p><strong>Project Details:</strong><br/>${details}</p>
     `,
         });

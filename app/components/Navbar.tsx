@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { getSocialLinks } from "../utility";
 
 const NAV_LINKS = [
     { name: "Home", href: "/" },
@@ -96,19 +97,37 @@ export default function Navbar() {
         Instead of a solid background, we use the blur effect 
         and a subtle white reflection to simulate glass.
     */}
-                <div className="absolute inset-0 z-0 bg-linear-to-br from-brand-dim to-brand-light"></div>
-
-                <div className="flex flex-col items-center space-y-10 text-center relative z-10 w-full">
-                    {NAV_LINKS.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className="font-heading text-4xl sm:text-5xl font-bold uppercase tracking-widest text-text-main hover:scale-105 transition-all duration-300 drop-shadow-sm"
-                            onClick={closeMenu}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
+                // bg-linear-to-br from-brand-dark to-brand-light
+                <div
+                    className="absolute inset-0 z-0 
+                bg-brand-light backdrop-blur-3xl border-l border-brand-light shadow-2xl"
+                ></div>
+                <div className="flex flex-col h-[60vh] items-center justify-between -mt-20 space-y-10 text-center relative z-10 w-full">
+                    <div className="flex flex-col items-center justify-between space-y-8 text-center relative z-10 w-full">
+                        {NAV_LINKS.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className="font-body text-2xl  font-bold uppercase tracking-widest text-text-main hover:scale-105 transition-all duration-300 drop-shadow-sm"
+                                onClick={closeMenu}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="flex gap-8 text-text-muted">
+                        {getSocialLinks().map((link, index) => (
+                            <a
+                                key={index}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-brand transition-colors hover:shadow-glow rounded-full flex items-center justify-center"
+                            >
+                                {link.icon}
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
         </nav>
