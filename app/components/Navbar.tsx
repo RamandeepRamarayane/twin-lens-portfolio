@@ -17,14 +17,14 @@ export default function Navbar() {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-12 lg:px-24 bg-white/70 supports-[backdrop-filter]:bg-white/50 backdrop-blur-md border-b border-gray-200/50">
+        <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-2 md:py-4  lg:px-24 bg-white/70 supports-[backdrop-filter]:bg-white/50 backdrop-blur-md border-b border-gray-200/50">
             {/* Brand / Logo */}
             <Link
                 href="/"
                 onClick={closeMenu}
                 className="font-heading text-xl md:text-2xl font-bold tracking-widest uppercase text-text-main flex items-center relative z-20"
             >
-                Twin Lens Production
+                {process.env.NEXT_PUBLIC_BRAND_NAME}
             </Link>
 
             {/* Desktop Navigation Links */}

@@ -45,7 +45,7 @@ function HeroSection() {
 
 function OurProcessSection() {
     return (
-        <section className="py-24 px-6 md:px-12 lg:px-24 bg-transparent border-y border-gray-200">
+        <section className="py-15 px-6 md:px-12 md:py-24 lg:px-24 bg-transparent border-y border-gray-200">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="font-heading text-3xl font-bold uppercase tracking-tight text-text-main mb-16">
                     Our Process
@@ -96,14 +96,14 @@ function OurProcessSection() {
 
 function FeaturedSection() {
     return (
-        <section id="work" className="py-24 px-6 md:px-12 lg:px-24 relative z-10">
+        <section id="work" className="py-15 px-6 md:px-12 md:py-24 lg:px-24 relative z-10">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-end mb-4 md:mb-12 border-b border-ghost pb-4 md:pb-6">
                     <h2 className="font-heading text-2xl md:text-4xl font-bold uppercase tracking-tight text-text-main">
                         Featured Work
                     </h2>
                     <Link
-                        href="/work"
+                        href="/gallery"
                         className="text-[10px] font-bold tracking-[0.2em] uppercase text-text-muted hover:text-brand transition-colors"
                     >
                         View All Archive →
@@ -139,7 +139,7 @@ function FeaturedSection() {
 
 function AboutTlpSection() {
     return (
-        <section className="py-24 px-6 md:px-12 lg:px-24 bg-background">
+        <section className="py-15 px-6 md:px-12 md:py-24 lg:px-24 bg-background">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 items-center">
                 <div>
                     <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase tracking-tight text-text-main mb-6">
@@ -147,8 +147,8 @@ function AboutTlpSection() {
                     </h2>
 
                     <p className="text-text-muted text-sm leading-relaxed mb-4">
-                        At Twin Lens Production, we pair sophisticated technical precision with a deep understanding of
-                        the story.
+                        At {process.env.NEXT_PUBLIC_BRAND_NAME}, we pair sophisticated technical precision with a deep
+                        understanding of the story.
                     </p>
 
                     <p className="text-text-muted text-sm leading-relaxed mb-4">
