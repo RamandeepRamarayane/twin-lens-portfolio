@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "./components/Button";
+import Button from "@/components/Button";
 import { PROCESS_STEPS } from "./constants";
 import { getSocialLinks } from "./utility";
 
@@ -114,22 +114,22 @@ function FeaturedSection() {
                 {/* Staggered Grid Layout */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Project 1 (Tall) */}
-                    <div className="relative group rounded-md overflow-hidden  border-ghost  cursor-pointer md:col-span-1 md:row-span-2">
+                    <div className="relative group rounded-xl overflow-hidden  border-ghost  cursor-pointer md:col-span-1 md:row-span-2">
                         <VerticalVideoEmbed vertical={true} url={"https://www.youtube.com/embed/ffuWFlS3riE"} />
                     </div>
 
                     {/* Project 2 (Square) */}
-                    <div className="relative group rounded-md overflow-hidden  cursor-pointer">
+                    <div className="relative group rounded-xl overflow-hidden  cursor-pointer">
                         <VerticalVideoEmbed url={"https://www.youtube.com/embed/x9WoMswT5E8"} />
                     </div>
 
                     {/* Project 3 (Square) */}
-                    <div className="relative group rounded-md overflow-hidden  cursor-pointer">
+                    <div className="relative group rounded-xl overflow-hidden  cursor-pointer">
                         <VerticalVideoEmbed url={"https://www.youtube.com/embed/hcfCX-ioMLI"} />
                     </div>
 
                     {/* Project 4 (Tall) */}
-                    <div className="relative group rounded-md overflow-hidden  cursor-pointer md:col-span-1 lg:col-span-2 min-h-[300px]">
+                    <div className="relative group rounded-xl overflow-hidden  cursor-pointer md:col-span-1 lg:col-span-2 min-h-[300px]">
                         <VerticalVideoEmbed url={"https://www.youtube.com/embed/fZoRKnToIew"} />
                     </div>
                 </div>
@@ -161,7 +161,7 @@ function AboutTlpSection() {
                     <p className="text-text-muted text-sm leading-relaxed mb-4">
                         Your vision deserves more than just an edit,
                         <br className="inline md:hidden" />
-                        <span className="font-bold text-text-main">it deserves a narrative.</span>
+                        <span className="font-bold text-text-main"> it deserves a narrative.</span>
                     </p>
                     <div className="flex gap-8 text-text-muted">
                         {getSocialLinks().map((link, index) => (
@@ -178,7 +178,7 @@ function AboutTlpSection() {
                     </div>
                 </div>
 
-                <div className="aspect-video rounded-lg overflow-hidden border border-ghost shadow-ambient bg-surface">
+                <div className="aspect-video rounded-2xl overflow-hidden border border-ghost shadow-ambient bg-surface">
                     <VerticalVideoEmbed url={"https://www.youtube.com/embed/x9WoMswT5E8"} />
                 </div>
             </div>

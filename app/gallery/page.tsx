@@ -1,4 +1,4 @@
-import Button from "../components/Button"; // Make sure to import your existing Button component
+import Button from "@/components/Button"; // Make sure to import your existing Button component
 
 export default function Gallery() {
     return (

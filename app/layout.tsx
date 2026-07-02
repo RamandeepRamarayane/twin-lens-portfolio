@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "@/components/Navbar";
 import { Inter, Oswald, Patrick_Hand } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });

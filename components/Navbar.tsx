@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { getSocialLinks } from "../utility";
+import { getSocialLinks } from "@/app/utility";
 
 const NAV_LINKS = [
     { name: "Home", href: "/" },

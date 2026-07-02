@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Button from "@/components/Button"; // Make sure to import your existing Button component
 
 export default function About() {
     return (
@@ -23,32 +23,9 @@ export default function About() {
             <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
                 {/* Left: Text & Handwritten Note */}
                 <div className="flex flex-col relative">
-                    {/* Patrick Hand Director's Note */}
-                    <div className="absolute -top-10 left-0 md:-left-8 flex flex-col items-start opacity-80">
-                        <span
-                            style={{ fontFamily: "var(--font-hand)" }}
-                            className="text-[#3F3F46] text-xl md:text-2xl transform -rotate-3"
-                        >
-                            The core truth.
-                        </span>
-                        {/* Simple SVG curved arrow */}
-                        <svg
-                            width="40"
-                            height="20"
-                            viewBox="0 0 40 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="ml-2 mt-1"
-                        >
-                            <path d="M1 1C10 15 25 18 38 10" stroke="#3F3F46" strokeWidth="1.5" strokeLinecap="round" />
-                            <path d="M32 6L39 9.5L34 15" stroke="#3F3F46" strokeWidth="1.5" strokeLinecap="round" />
-                        </svg>
-                    </div>
-
                     <h2 className="font-body text-xs md:text-sm font-bold uppercase tracking-widest text-text-main mb-6">
                         Our Philosophy
                     </h2>
-
                     <div className="space-y-6 font-body text-text-muted text-sm leading-relaxed">
                         <p>
                             A studio is not just a room with equipment; it's an environment engineered for focus. We
@@ -63,13 +40,7 @@ export default function About() {
                 </div>
 
                 {/* Right: The Studio Image */}
-                <div className="relative aspect-[4/5] bg-surface rounded-sm border border-ghost overflow-hidden shadow-ambient">
-                    {/* Replace this div with an actual <Image src="/your-studio-image.jpg" /> once you have your photo */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent z-10"></div>
-                    <div className="absolute inset-0 flex items-center justify-center text-text-muted font-body text-xs uppercase tracking-widest z-0 opacity-50">
-                        [ Edit Bay Image / screen.jpg reference ]
-                    </div>
-                </div>
+                <div className="relative aspect-4/5 bg-surface rounded-2xl border border-ghost overflow-hidden shadow-ambient"></div>
             </div>
 
             {/* -----------------------------------------
@@ -86,19 +57,12 @@ export default function About() {
                             The Tools We Trust
                         </h3>
                     </div>
-
-                    <span
-                        style={{ fontFamily: "var(--font-hand)" }}
-                        className="text-[#3F3F46] text-xl md:text-2xl transform rotate-2 md:absolute md:left-full md:ml-6 md:top-0 whitespace-nowrap"
-                    >
-                        Precision instruments.
-                    </span>
                 </div>
 
                 {/* The Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                     {/* Premiere Pro */}
-                    <div className="p-8 bg-surface-low border border-ghost rounded-sm hover:border-ghost-hover transition-colors">
+                    <div className="p-8 bg-surface-low border border-ghost rounded-2xl hover:border-ghost-hover transition-colors">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="w-8 h-8 rounded bg-surface border border-ghost flex items-center justify-center text-text-main text-xs font-bold">
                                 Pr
@@ -114,7 +78,7 @@ export default function About() {
                     </div>
 
                     {/* DaVinci Resolve */}
-                    <div className="p-8 bg-surface-low border border-ghost rounded-sm hover:border-ghost-hover transition-colors">
+                    <div className="p-8 bg-surface-low border border-ghost rounded-2xl hover:border-ghost-hover transition-colors">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="w-8 h-8 rounded bg-surface border border-ghost flex items-center justify-center text-text-main text-xs font-bold">
                                 Da
@@ -130,7 +94,7 @@ export default function About() {
                     </div>
 
                     {/* After Effects */}
-                    <div className="p-8 bg-surface-low border border-ghost rounded-sm hover:border-ghost-hover transition-colors md:col-span-2 lg:col-span-1">
+                    <div className="p-8 bg-surface-low border border-ghost rounded-2xl hover:border-ghost-hover transition-colors md:col-span-2 lg:col-span-1">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="w-8 h-8 rounded bg-surface border border-ghost flex items-center justify-center text-text-main text-xs font-bold">
                                 Ae
@@ -144,6 +108,24 @@ export default function About() {
                             requires a visual solution beyond the cut, AE provides the necessary pixel-level control.
                         </p>
                     </div>
+                </div>
+            </div>
+            {/* -----------------------------------------
+                      BOTTOM CTA
+                      ----------------------------------------- */}
+            <div className="text-center w-full max-w-2xl flex flex-col items-center">
+                <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase tracking-tight text-text-main mb-8">
+                    Ready To Start?
+                </h2>
+
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <Button variant="primary" href="/contact">
+                        Discuss A Project
+                    </Button>
+
+                    <Button variant="secondary" href="/#work">
+                        View Portfolio
+                    </Button>
                 </div>
             </div>
         </div>

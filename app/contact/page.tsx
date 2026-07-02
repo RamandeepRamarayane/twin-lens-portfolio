@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "../components/Button";
+import Button from "@/components/Button";
 import { useState } from "react";
 import { getSocialLinks } from "../utility";
 
@@ -210,8 +210,14 @@ export default function Contact() {
                         </div>
 
                         {errorMessage && (
-                            <p className="text-red-500 text-xs text-center font-semibold tracking-wide uppercase mt-2">
-                                {errorMessage}
+                            <p className="text-red-400 text-center text-xs sm:text-sm font-body leading-relaxed">
+                                Something went wrong. Please try again, or reach out directly at{" "}
+                                <a
+                                    href="mailto:twinlens4productions@gmail.com"
+                                    className="text-brand font-semibold hover:text-white transition-colors underline underline-offset-4 decoration-brand/30 hover:decoration-white"
+                                >
+                                    twinlens4productions@gmail.com
+                                </a>
                             </p>
                         )}
 

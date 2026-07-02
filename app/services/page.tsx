@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "@/components/Button";
 
 export default function Services() {
     return (
@@ -26,7 +26,7 @@ export default function Services() {
           ----------------------------------------- */}
             <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-6 mb-32 relative z-10">
                 {/* Card 1: Commercial Editing (Spans 2 columns) */}
-                <div className="relative group bg-surface-low border border-ghost rounded-lg p-8 md:p-12 overflow-hidden hover:border-ghost-hover transition-all duration-500 lg:col-span-2 flex flex-col justify-between min-h-[400px]">
+                <div className="relative group bg-surface-low border border-ghost rounded-2xl p-8 md:p-12 overflow-hidden hover:border-ghost-hover transition-all duration-500 lg:col-span-2 flex flex-col justify-between min-h-[400px]">
                     {/* Faint Background Image Simulator */}
                     <div className="absolute right-0 bottom-0 w-2/3 h-2/3 bg-gradient-to-tl from-surface-high/20 to-transparent pointer-events-none z-0"></div>
 
@@ -55,7 +55,7 @@ export default function Services() {
                                 Offline & Online Edits
                             </li>
                             <li className="flex items-center gap-3">
-                                <span className="w-4 h-4 rounded-sm border border-brand flex items-center justify-center text-brand">
+                                <span className="w-4 h-4 rounded-2xl border border-brand flex items-center justify-center text-brand">
                                     ◩
                                 </span>
                                 Social Media Cut-downs
@@ -69,7 +69,7 @@ export default function Services() {
                 </div>
 
                 {/* Card 2: Color Grading (Spans 1 column) */}
-                <div className="relative group bg-surface-low border border-ghost rounded-lg p-8 md:p-10 hover:border-ghost-hover transition-all duration-500 flex flex-col justify-between min-h-[400px]">
+                <div className="relative group bg-surface-low border border-ghost rounded-2xl p-8 md:p-10 hover:border-ghost-hover transition-all duration-500 flex flex-col justify-between min-h-[400px]">
                     <div>
                         <span className="font-body text-[10px] font-bold tracking-[0.2em] text-[#a87b1e] uppercase mb-4 block">
                             02 // Finishing
@@ -102,7 +102,7 @@ export default function Services() {
                 </div>
 
                 {/* Card 3: Motion Graphics (Spans full width - 3 columns) */}
-                <div className="relative group bg-surface-low border border-ghost rounded-lg p-8 md:p-12 hover:border-ghost-hover transition-all duration-500 lg:col-span-3 flex flex-col md:flex-row gap-8 md:gap-16 items-start md:items-center">
+                <div className="relative group bg-surface-low border border-ghost rounded-2xl p-8 md:p-12 hover:border-ghost-hover transition-all duration-500 lg:col-span-3 flex flex-col md:flex-row gap-8 md:gap-16 items-start md:items-center">
                     <div className="flex-1">
                         <span className="font-body text-[10px] font-bold tracking-[0.2em] text-brand uppercase mb-4 block">
                             03 // Animation
@@ -146,22 +146,17 @@ export default function Services() {
           ----------------------------------------- */}
             <div className="text-center w-full max-w-2xl flex flex-col items-center">
                 <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase tracking-tight text-text-main mb-8">
-                    Ready To <span className="text-brand drop-shadow-glow">Start?</span>
+                    Ready To Start?
                 </h2>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <Link
-                        href="/contact"
-                        className="bg-brand hover:bg-brand-dim text-brand-dark font-heading text-sm font-bold uppercase tracking-[0.15em] px-10 py-5 rounded transition-all shadow-glow flex items-center justify-center group"
-                    >
+                    <Button variant="primary" href="/contact">
                         Discuss A Project
-                    </Link>
-                    <Link
-                        href="/#work"
-                        className="border border-button-border text-text-main hover:bg-ghost-hover font-heading text-sm font-bold uppercase tracking-[0.15em] px-10 py-5 rounded transition-all flex items-center justify-center"
-                    >
+                    </Button>
+
+                    <Button variant="secondary" href="/#work">
                         View Portfolio
-                    </Link>
+                    </Button>
                 </div>
             </div>
         </div>
