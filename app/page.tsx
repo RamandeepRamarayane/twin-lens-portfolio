@@ -34,7 +34,7 @@ function HeroSection() {
             RIGHT SIDE: YouTube Embed
             ----------------------------------------- */}
                 <div className="w-full relative z-10 mt-6 md:mt-0">
-                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/stTMvfFTLzg"} />
+                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/d"} />
                 </div>
             </div>
 
@@ -206,7 +206,7 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-screen text-text-main font-body ">
             <HeroSection />
-            <FeaturedSection />
+            {/* <FeaturedSection /> */}
             <OurProcessSection />
             <AboutTlpSection />
             <section className="py-15 px-15 md:px-6 text-center border-t border-ghost ">
