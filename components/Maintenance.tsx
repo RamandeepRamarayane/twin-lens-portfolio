@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Maintenance() {
     return (
         <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 sm:px-6 py-20 relative overflow-hidden">
@@ -16,11 +18,18 @@ export default function Maintenance() {
               MAIN CONTENT CONTAINER
             ----------------------------------------- */}
             <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
-                {/* Minimalist Glowing Recording Indicator */}
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-ghost bg-surface-low/50 backdrop-blur-sm flex items-center justify-center mb-8 shadow-ambient">
-                    <div className="w-3 h-3 md:w-4 md:h-4 bg-brand rounded-full animate-pulse shadow-glow"></div>
-                </div>
+                {/* TLP Logo */}
 
+                <div className="w-30 h-25 md:w-35 md:h-30 mb-8 overflow-hidden flex items-center justify-center rounded-lg">
+                    <Image
+                        src="/PNG/TLP_1000_nosub.png"
+                        alt="Twin Lens Production Logo"
+                        width={512}
+                        height={512}
+                        priority
+                        className="scale-140 w-full h-full object-contain drop-shadow-glow transition-transform duration-500 ease-out hover:scale-145 animate-in fade-in duration-700"
+                    />
+                </div>
                 {/* Cinematic Pre-Heading */}
                 <p className="font-heading text-[10px] md:text-xs text-text-muted uppercase tracking-[0.3em] font-semibold mb-4">
                     Twin Lens Production
