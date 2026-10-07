@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { getSocialLinks } from "@/app/utility";
+import Image from "next/image";
 
 const NAV_LINKS = [
     { name: "Home", href: "/" },
@@ -10,6 +11,28 @@ const NAV_LINKS = [
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
 ];
+
+export function BrandLogo({ closeMenu = () => {} }: { closeMenu?: () => void }) {
+    return (
+        <Link
+            href="/"
+            onClick={closeMenu}
+            className="font-heading text-xl md:text-2xl font-medium tracking-widest uppercase text-text-main flex justify-start items-center relative z-20"
+        >
+            <div className="overflow-hidden">
+                <Image
+                    src="/PNG/TLP_1000_nosub.png"
+                    alt="TLP Logo"
+                    width={50}
+                    height={25}
+                    priority
+                    className="aspect-1.5/1 scale-150 w-full h-full  border-black object-contain drop-shadow-glow transition-transform ease-out hover:scale-101 animate-in fade-in duration-700"
+                />
+            </div>
+            <div className="hidden md:block ml-2 capitalize">{process.env.NEXT_PUBLIC_BRAND_NAME}</div>
+        </Link>
+    );
+}
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,14 +43,7 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-2 md:py-4  lg:px-24 bg-white/70 supports-[backdrop-filter]:bg-white/50 backdrop-blur-md border-b border-gray-200/50">
             {/* Brand / Logo */}
-            <Link
-                href="/"
-                onClick={closeMenu}
-                className="font-heading text-xl md:text-2xl font-bold tracking-widest uppercase text-text-main flex items-center relative z-20"
-            >
-                {process.env.NEXT_PUBLIC_BRAND_NAME}
-            </Link>
-
+            <BrandLogo closeMenu={closeMenu} />
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase text-text-muted">
                 {NAV_LINKS.map((link) => (

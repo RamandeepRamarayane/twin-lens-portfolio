@@ -23,9 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body
                 className={`${inter.variable} ${oswald.variable} ${patrickHand.variable} bg-background text-text-main min-h-screen font-body antialiased`}
             >
-                <Maintenance />
-                {/* <Navbar />
-                {children} */}
+                {/* <Maintenance /> */}
+                <Navbar />
+                {children}
             </body>
         </html>
     );

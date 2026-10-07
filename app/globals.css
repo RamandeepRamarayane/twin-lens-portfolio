@@ -7,6 +7,7 @@
     --color-surface-low: #E4E4E5; 
     --color-surface-high: #D4D4D8;
     --color-nav: rgba(255, 255, 255, 0.8);
+    --color-accent: #facc15;
 
     /* Brand Accent (Graphite for Patrick Hand/Accents) */
     --color-brand: #3F3F46;      /* Zinc 700 */

@@ -5,17 +5,22 @@ import { getSocialLinks } from "./utility";
 
 function HeroSection() {
     return (
-        <section className="relative min-h-[80vh] flex items-center pt-24 px-6 md:px-12 lg:px-24 overflow-hidden ">
-            {/* Container for Split Layout */}
-            <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+        <section className="relative min-h-[60vh] md:min-h-[80vh] flex items-center  pt-0  md:pt-24 px-6 md:px-12 lg:px-24 overflow-hidden ">
+            <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-4 items-center">
                 {/* -----------------------------------------
             LEFT SIDE: Tagline & CTAs
             ----------------------------------------- */}
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left z-10">
-                    <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-[1.05] mb-6">
-                        Crafting <span className="text-brand drop-shadow-glow">Cinematic</span>{" "}
+                    <h1 className="font-heading text-4xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight text-left leading-[1.05] mb-6">
+                        Edit
                         <br className="hidden md:block" />
-                        Stories.
+                        {/* First Separator (Mobile Only) */}
+                        <span className="inline-flex justify-center align-center md:hidden w-0.5 h-7 bg-accent mx-3"></span>
+                        Grade
+                        <br className="hidden md:block" />
+                        {/* Second Separator (Mobile Only) */}
+                        <span className="inline-flex justify-center align-center md:hidden w-0.5 h-7 bg-accent mx-3"></span>
+                        Deliver
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
@@ -33,8 +38,8 @@ function HeroSection() {
                 {/* -----------------------------------------
             RIGHT SIDE: YouTube Embed
             ----------------------------------------- */}
-                <div className="w-full relative z-10 mt-6 md:mt-0">
-                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/d"} />
+                <div className="w-full relative z-10 mb-5 mt-5 md:mb-0 md:mt-0">
+                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/KA1nVCXZJjE"} loop={true} />
                 </div>
             </div>
 
@@ -186,14 +191,24 @@ function AboutTlpSection() {
     );
 }
 
-function VerticalVideoEmbed({ vertical = false, url = "" }: { vertical?: boolean; url: string }) {
+function VerticalVideoEmbed({
+    vertical = false,
+    url = "",
+    autoplay = false,
+    loop = false,
+}: {
+    vertical?: boolean;
+    url: string;
+    autoplay?: boolean;
+    loop?: boolean;
+}) {
     return (
         <div
             className={`${vertical ? "aspect-9/16" : "aspect-video"} rounded-xl overflow-hidden border border-gray-200 shadow-xl bg-surface`}
         >
             <iframe
                 className="w-full h-full"
-                src={url}
+                src={`${url}?autoplay=${autoplay ? 1 : 0}&loop=${loop ? 1 : 0}`}
                 title="YouTube Vertical Short"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -205,6 +220,9 @@ function VerticalVideoEmbed({ vertical = false, url = "" }: { vertical?: boolean
 export default function Home() {
     return (
         <div className="flex flex-col min-h-screen text-text-main font-body ">
+            <h1 className="flex justify-center md:hidden font-heading text-4xl md:text-7xl lg:text-8xl pt-24 ">
+                <div>{process.env.NEXT_PUBLIC_BRAND_NAME}</div>
+            </h1>
             <HeroSection />
             {/* <FeaturedSection /> */}
             <OurProcessSection />
