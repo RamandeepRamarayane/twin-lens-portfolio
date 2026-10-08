@@ -145,7 +145,7 @@ export default function Services() {
                         </p>
                     </div>
 
-                    <div className="w-full md:w-auto md:border-l md:border-ghost md:pl-16">
+                    <div className="w-full md:w-auto border-t md:border-l border-ghost pt-8 md:pl-16 md:pt-0">
                         <ul className="space-y-4 font-body text-sm text-text-muted">
                             <li className="flex items-center gap-1">
                                 <span className="text-accent">
