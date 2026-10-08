@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Image from "next/image";
 
 export default function Services() {
     return (
@@ -59,9 +60,24 @@ export default function Services() {
 
                         <div className="mt-12 pt-8 border-t border-ghost">
                             <ul className="space-y-3 font-body text-xs text-text-muted">
-                                <li className="flex items-center gap-3">Multi-Event Editing</li>
-                                <li className="flex items-center gap-3">Multicam & Sync</li>
-                                <li className="flex items-center gap-3">Complete Wedding Coverage</li>
+                                <li className="flex items-center gap-1">
+                                    <span className="text-accent">
+                                        <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                    </span>
+                                    Multi-Event Editing
+                                </li>
+                                <li className="flex items-center gap-1">
+                                    <span className="text-accent">
+                                        <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                    </span>
+                                    Multicam & Sync
+                                </li>
+                                <li className="flex items-center gap-1">
+                                    <span className="text-accent">
+                                        <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                    </span>
+                                    Complete Wedding Coverage
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -87,9 +103,24 @@ export default function Services() {
 
                         <div className="mt-12 pt-8 border-t border-ghost">
                             <ul className="space-y-4 font-body text-xs text-text-muted">
-                                <li className="flex items-center gap-3">Story-Driven Edit</li>
-                                <li className="flex items-center gap-3">Emotional Pacing</li>
-                                <li className="flex items-center gap-3">Cinematic Colour</li>
+                                <li className="flex items-center gap-1">
+                                    <span className="text-accent">
+                                        <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                    </span>
+                                    Story-Driven Edit
+                                </li>
+                                <li className="flex items-center gap-1">
+                                    <span className="text-accent">
+                                        <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                    </span>
+                                    Emotional Pacing
+                                </li>
+                                <li className="flex items-center gap-1">
+                                    <span className="text-accent">
+                                        <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                    </span>
+                                    Cinematic Colour
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -116,9 +147,24 @@ export default function Services() {
 
                     <div className="w-full md:w-auto md:border-l md:border-ghost md:pl-16">
                         <ul className="space-y-4 font-body text-sm text-text-muted">
-                            <li className="flex items-center gap-3">Story Curation</li>
-                            <li className="flex items-center gap-3">Music & Rhythm</li>
-                            <li className="flex items-center gap-3">Emotional Moments</li>
+                            <li className="flex items-center gap-1">
+                                <span className="text-accent">
+                                    <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                </span>
+                                Story Curation
+                            </li>
+                            <li className="flex items-center gap-1">
+                                <span className="text-accent">
+                                    <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                </span>
+                                Music & Rhythm
+                            </li>
+                            <li className="flex items-center gap-1">
+                                <span className="text-accent">
+                                    <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                                </span>
+                                Emotional Moments
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -141,9 +187,24 @@ export default function Services() {
                         </p>
                     </div>
                     <ul className="space-y-2 font-body text-[11px] text-text-muted border-t border-ghost pt-4">
-                        <li className="flex items-center gap-2">Cinematic Teasers</li>
-                        <li className="flex items-center gap-2">Instagram Reels</li>
-                        <li className="flex items-center gap-2">Social-Ready Edits</li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Cinematic Teasers
+                        </li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Instagram Reels
+                        </li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Social-Ready Edits
+                        </li>
                     </ul>
                 </div>
 
@@ -164,9 +225,24 @@ export default function Services() {
                         </p>
                     </div>
                     <ul className="space-y-2 font-body text-[11px] text-text-muted border-t border-ghost pt-4">
-                        <li className="flex items-center gap-2">Couple Story</li>
-                        <li className="flex items-center gap-2">Music-Led Editing</li>
-                        <li className="flex items-center gap-2">Cinematic Look</li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Couple Story
+                        </li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Music-Led Editing
+                        </li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Cinematic Look
+                        </li>
                     </ul>
                 </div>
 
@@ -187,9 +263,24 @@ export default function Services() {
                         </p>
                     </div>
                     <ul className="space-y-2 font-body text-[11px] text-text-muted border-t border-ghost pt-4">
-                        <li className="flex items-center gap-2">Event Storytelling</li>
-                        <li className="flex items-center gap-2">Highlights & Recaps</li>
-                        <li className="flex items-center gap-2">Corporate Events</li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Event Storytelling
+                        </li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Highlights & Recaps
+                        </li>
+                        <li className="flex items-center gap-1">
+                            <span className="text-accent">
+                                <Image src="/SVG/ChevronForward.svg" alt="Logo" width={14} height={14} />
+                            </span>
+                            Corporate Events
+                        </li>
                     </ul>
                 </div>
             </div>
