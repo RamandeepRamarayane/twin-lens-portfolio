@@ -2,6 +2,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import { PROCESS_STEPS } from "./constants";
 import { getSocialLinks } from "./utility";
+import Image from "next/image";
 
 function HeroSection() {
     return (
@@ -12,15 +13,18 @@ function HeroSection() {
             ----------------------------------------- */}
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left z-10">
                     <h1 className="font-heading text-4xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight text-left leading-[1.05] mb-6">
-                        Edit
+                        <span className="relative text-brand-dim">Edit</span>
                         <br className="hidden md:block" />
                         {/* First Separator (Mobile Only) */}
                         <span className="inline-flex justify-center align-center md:hidden w-0.5 h-7 bg-accent mx-3"></span>
-                        Grade
+                        <span className="relative">
+                            Grade
+                            <span className="left-0 absolute bottom-0 -translate-y-4 hidden md:inline-block w-full h-0.5 bg-accent mx-3"></span>
+                        </span>
                         <br className="hidden md:block" />
                         {/* Second Separator (Mobile Only) */}
                         <span className="inline-flex justify-center align-center md:hidden w-0.5 h-7 bg-accent mx-3"></span>
-                        Deliver
+                        <span className="relative text-brand-dim">Deliver</span>
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
@@ -39,7 +43,10 @@ function HeroSection() {
             RIGHT SIDE: YouTube Embed
             ----------------------------------------- */}
                 <div className="w-full relative z-10 mb-5 mt-5 md:mb-0 md:mt-0">
-                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/KA1nVCXZJjE"} loop={true} />
+                    <div className="absolute w-full h-full bg-gray-200 rounded-xl overflow-hidden">
+                        <Image src={"/PNG/TLP_YT_Banner.png"} height={354} width={630} alt="YouTube Video Banner" />
+                    </div>
+                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/KA1nVCXsZJjE"} loop={true} />
                 </div>
             </div>
 
@@ -182,10 +189,19 @@ function AboutTlpSection() {
                         ))}
                     </div>
                 </div>
-
-                <div className="aspect-video rounded-2xl overflow-hidden border border-ghost shadow-ambient bg-surface">
-                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/x9WoMswT5E8"} />
-                </div>
+                <div className="flex justify-center align-center">
+                    <Image
+                        src={"/PNG/TLP_1000_BG.png"}
+                        height={350}
+                        width={350}
+                        alt="TLP Full Logo"
+                        className="rounded-2xl"
+                    />
+                </div>{" "}
+                {/* <div className="aspect-video rounded-2xl overflow-hidden border border-ghost shadow-ambient bg-surface relative">
+                 
+                    <VerticalVideoEmbed url={"https://www.youtube.com/embed/x9WoMswTs5E8"} />
+                </div> */}
             </div>
         </section>
     );

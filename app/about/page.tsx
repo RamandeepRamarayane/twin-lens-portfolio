@@ -11,7 +11,11 @@ export default function About() {
             <div className="max-w-4xl text-center mb-24 flex flex-col items-center">
                 <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-text-main mb-8 leading-[1.1]">
                     I Turn Wedding Footage <br className="hidden md:block" />
-                    Into <span className="text-brand drop-shadow-glow">Stories People Remember.</span>
+                    Into{" "}
+                    <span className="text-brand drop-shadow-glow relative">
+                        Stories People Remember.
+                        <span className="left-0 absolute bottom-0 -translate-y-2 hidden md:inline-block w-full h-0.5 bg-accent mx-3"></span>
+                    </span>
                 </h1>
                 <p className="font-body text-text-muted text-sm md:text-base leading-relaxed max-w-2xl">
                     I’m Raman, a wedding video editor focused on turning hours of raw footage into films that feel
@@ -95,8 +99,14 @@ export default function About() {
                             <h4 className="font-heading text-lg font-bold uppercase tracking-widest text-text-main mb-1">
                                 DaVinci Resolve
                             </h4>
-                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest">
-                                Editing · Colour · Audio · Finishing
+                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest flex items-center gap-2 justify-start">
+                                Editing{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Colour{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Audio{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Finishing
                             </p>
                         </div>
                     </div>
@@ -114,15 +124,19 @@ export default function About() {
                         </div>
                         <div className="md:order-3 flex items-start justify-end">
                             <span className="inline-block px-3 py-1 bg-surface border border-ghost rounded-full font-body text-[10px] uppercase tracking-widest text-text-muted font-semibold">
-                                Learning
+                                Proficient
                             </span>
                         </div>
                         <div className="col-span-2 md:order-2 md:flex-1">
                             <h4 className="font-heading text-lg font-bold uppercase tracking-widest text-text-main mb-1">
                                 Final Cut Pro
                             </h4>
-                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest">
-                                FCP Workflow · Studio Collaboration
+                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest flex items-center gap-2 justify-start">
+                                Editing{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Audio{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Finishing
                             </p>
                         </div>
                     </div>
@@ -147,8 +161,12 @@ export default function About() {
                             <h4 className="font-heading text-lg font-bold uppercase tracking-widest text-text-main mb-1">
                                 Canva
                             </h4>
-                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest">
-                                Design · Social · Visual Assets
+                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest flex items-center gap-2 justify-start">
+                                Creative Support{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Digital Assets{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Socials
                             </p>
                         </div>
                     </div>
@@ -173,8 +191,10 @@ export default function About() {
                             <h4 className="font-heading text-lg font-bold uppercase tracking-widest text-text-main mb-1">
                                 AI Video
                             </h4>
-                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest">
-                                Runway · Veo
+                            <p className="font-body text-[10px] text-text-muted uppercase tracking-widest flex items-center gap-2 justify-start">
+                                Runway
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                VEO
                             </p>
                         </div>
                     </div>
@@ -187,8 +207,14 @@ export default function About() {
                             <h4 className="font-heading text-2xl font-bold uppercase tracking-widest text-text-main mb-2">
                                 More Than Editing
                             </h4>
-                            <p className="font-body text-[11px] text-brand uppercase tracking-widest mb-6 font-semibold">
-                                Story · Rhythm · Emotion · Detail
+                            <p className="font-body text-[11px] text-brand uppercase tracking-widest mb-6 font-semibold flex items-center gap-2 justify-start">
+                                Story{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>
+                                Rhythm{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Emotion{" "}
+                                <span className="flex justify-center items-center w-1 h-1 bg-accent rounded-full"></span>{" "}
+                                Detail
                             </p>
                             <p className="font-body text-sm leading-relaxed text-text-muted max-w-2xl">
                                 The software is only part of the process. My focus is on understanding the footage,
