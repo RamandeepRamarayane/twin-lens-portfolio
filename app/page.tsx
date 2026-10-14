@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function HeroSection() {
     return (
-        <section className="relative min-h-[60vh] md:min-h-[80vh] flex items-center  pt  md:pt-24 px-6 md:px-12 lg:px-24 overflow-hidden ">
+        <section className="relative min-h-[75vh] md:min-h-[80vh] flex items-center  pt  md:pt-24 px-6 md:px-12 lg:px-24 overflow-hidden ">
             <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-4 items-center">
                 {/* -----------------------------------------
             LEFT SIDE: Tagline & CTAs

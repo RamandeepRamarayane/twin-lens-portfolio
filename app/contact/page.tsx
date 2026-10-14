@@ -68,10 +68,10 @@ export default function Contact() {
     }
 
     return (
-        <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 sm:px-6 py-20 md:py-32 overflow-hidden relative">
+        <div className="min-h-screen bg-background flex flex-col items-center justify-center pt-29 px-4 sm:px-6 py-20 md:py-32 overflow-hidden relative">
             <div className="relative z-10 w-full max-w-3xl flex flex-col items-center">
                 {/* Header */}
-                <div className="text-center mt-3 mb-3 md:mb-12 md:mt-0 w-full">
+                <div className="text-center mt-3 mb-6 md:mb-10 md:mt-0 w-full">
                     <h1 className="relative z-10 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-brand mb-6 leading-[1.05]">
                         <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                             Let's Frame <br />
