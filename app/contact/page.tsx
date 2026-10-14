@@ -72,9 +72,11 @@ export default function Contact() {
             <div className="relative z-10 w-full max-w-3xl flex flex-col items-center">
                 {/* Header */}
                 <div className="text-center mt-3 mb-3 md:mb-12 md:mt-0 w-full">
-                    <h1 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold uppercase leading-[1.1] mb-4 md:mb-6 tracking-tight">
-                        Let's Frame <br className="hidden md:block" />
-                        <span className="text-brand drop-shadow-glow">The Narrative</span>
+                    <h1 className="relative z-10 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-brand mb-6 leading-[1.05]">
+                        <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                            Let's Frame <br />
+                        </span>
+                        <span className="text-text-main drop-shadow-glow relative">The Narrative</span>
                     </h1>
                 </div>
 

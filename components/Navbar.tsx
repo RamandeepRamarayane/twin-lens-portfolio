@@ -45,6 +45,9 @@ export default function Navbar() {
             {/* Brand / Logo */}
             <BrandLogo closeMenu={closeMenu} />
             {/* Desktop Navigation Links */}
+            <div className="font-heading text-xl md:text-2xl font-medium tracking-widest  text-text-main justify-start items-center relative z-20 block md:hidden ml-2 capitalize">
+                {process.env.NEXT_PUBLIC_BRAND_NAME}
+            </div>
             <div className="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase text-text-muted">
                 {NAV_LINKS.map((link) => (
                     <Link

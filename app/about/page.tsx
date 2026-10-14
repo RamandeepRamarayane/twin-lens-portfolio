@@ -9,13 +9,11 @@ export default function About() {
               TOP: Hero Statement
             ----------------------------------------- */}
             <div className="max-w-4xl text-center mb-24 flex flex-col items-center">
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-text-main mb-8 leading-[1.1]">
-                    I Turn Wedding Footage <br className="hidden md:block" />
-                    Into{" "}
-                    <span className="text-brand drop-shadow-glow relative">
-                        Stories People Remember.
-                        <span className="left-0 absolute bottom-0 -translate-y-2 hidden md:inline-block w-full h-0.5 bg-accent mx-3"></span>
+                <h1 className="relative z-10 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-brand mb-6 leading-[1.05]">
+                    <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                        I Turn Wedding Footage Into <br />
                     </span>
+                    <span className="text-text-main drop-shadow-glow relative">Stories People Remember.</span>
                 </h1>
                 <p className="font-body text-text-muted text-sm md:text-base leading-relaxed max-w-2xl">
                     I’m Raman, a wedding video editor focused on turning hours of raw footage into films that feel
@@ -30,9 +28,9 @@ export default function About() {
                 {/* Left: Text */}
                 <div className="flex flex-col relative">
                     <h2 className="font-body text-xs md:text-sm font-bold uppercase tracking-widest text-text-main mb-1">
-                        About Me
+                        Ramandeep Ramarayane
                     </h2>
-                    <h3 className="font-body text-[10px] tracking-widest text-brand uppercase mb-8">
+                    <h3 className="font-body text-[10px] tracking-widest text-brand  capitalize mb-8">
                         The person behind the edits.
                     </h3>
 

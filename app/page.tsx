@@ -6,14 +6,14 @@ import Image from "next/image";
 
 function HeroSection() {
     return (
-        <section className="relative min-h-[60vh] md:min-h-[80vh] flex items-center  pt-0  md:pt-24 px-6 md:px-12 lg:px-24 overflow-hidden ">
+        <section className="relative min-h-[60vh] md:min-h-[80vh] flex items-center  pt  md:pt-24 px-6 md:px-12 lg:px-24 overflow-hidden ">
             <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-4 items-center">
                 {/* -----------------------------------------
             LEFT SIDE: Tagline & CTAs
             ----------------------------------------- */}
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left z-10">
                     <h1 className="font-heading text-4xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight text-left leading-[1.05] mb-6">
-                        <span className="relative text-brand-dim">Edit</span>
+                        <span className="relative">Edit</span>
                         <br className="hidden md:block" />
                         {/* First Separator (Mobile Only) */}
                         <span className="inline-flex justify-center align-center md:hidden w-0.5 h-7 bg-accent mx-3"></span>
@@ -24,7 +24,7 @@ function HeroSection() {
                         <br className="hidden md:block" />
                         {/* Second Separator (Mobile Only) */}
                         <span className="inline-flex justify-center align-center md:hidden w-0.5 h-7 bg-accent mx-3"></span>
-                        <span className="relative text-brand-dim">Deliver</span>
+                        <span className="relative">Deliver</span>
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
@@ -236,9 +236,6 @@ function VerticalVideoEmbed({
 export default function Home() {
     return (
         <div className="flex flex-col min-h-screen text-text-main font-body ">
-            <h1 className="flex justify-center md:hidden font-heading text-4xl md:text-7xl lg:text-8xl pt-24 ">
-                <div>{process.env.NEXT_PUBLIC_BRAND_NAME}</div>
-            </h1>
             <HeroSection />
             {/* <FeaturedSection /> */}
             <OurProcessSection />
